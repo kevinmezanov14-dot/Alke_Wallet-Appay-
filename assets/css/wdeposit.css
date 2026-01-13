@@ -5,7 +5,7 @@
         .deposit-card h2 {
         margin-bottom: 1.5rem;
         text-align: center;
-        color: var(--bg-main);
+        color: var(--text-main);
         text-shadow: 0 0 10px var(--text-shadow);
         }
         .balance-label{
