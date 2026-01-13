@@ -1,0 +1,82 @@
+        .send-card {
+        width: 100%;
+        max-width: 420px;
+        }
+        .send-card h2 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+        color: var(--text-main);
+        text-shadow: 0 0 10px var(--text-shadow);
+        }
+        .list-group-item {
+        background-color: var(--bg-main);
+        border: 1px solid var(--border-main);
+        color: var(--text-main);
+        }
+        .list-group-item.active {
+        background-color: var(--matrix);
+        color: var(--bg-main);
+        }
+        .contact-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: var(--matrix);
+        color: var(--bg-main);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        }
+        /* Lista de contactos base */
+        .list-group-item.contact-item {
+        background-color: var(--bg-main) !important;
+        border: 1px solid var(--border-main);
+        color: var(--text-main);
+        cursor: pointer;
+        }
+        /* Contacto al hacer (CLICK) */
+        .list-group-item.contact-item.active {
+        background-color: var(--green-main) !important;
+        border-color: var(--green-soft);
+        color: var(--bg-main);
+        }
+        .list-group-item.contact-item.active strong,
+        .list-group-item.contact-item.active small {
+        color: var(--bg-main);
+        }
+        .list-group-item.contact-item:hover {
+        background-color: rgba(0, 255, 102, 0.12);
+        }
+        /* Lista de contactos */
+        #contactList {
+        max-height: 180px;   /* limitar altura para scroll */
+        overflow-y: auto;
+        }
+        /* Formulario agregar contacto */
+        #contactFormContainer .form-control {
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        }
+        /* Margen extra para secciones dinámicas */
+        #amountContainer, #sendBtn {
+        margin-top: 0px;
+        }
+        /* Mejor separación de botones */
+        #sendBtn, #backMenuBtn {
+        margin-top: 0.5rem;
+        }
+        /* Adaptable para móviles */
+        @media (max-width: 500px) {
+        .wallet-card {
+        padding: 1.5rem;
+        }
+        .wallet-card .logo {
+        font-size: 2.2rem;
+        }
+        .wallet-card h2 {
+        font-size: 1.6rem;
+        }
+        }
+
+

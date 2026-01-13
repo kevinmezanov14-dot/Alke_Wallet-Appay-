@@ -1,0 +1,20 @@
+        .menu-card {
+        width: 100%;
+        max-width: 400px;
+        }
+        .menu-card h2 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+        color: var(--text-white);
+        text-shadow: 0 0 10px var(--text-shadow);
+        }
+        .balance-label {
+        font-size: 0.9rem;
+        color: var(--text-soft);
+        }
+        .balance-amount {
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: var(--green-main);
+        margin-bottom: 2rem;
+        }

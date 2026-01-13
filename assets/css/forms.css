@@ -1,0 +1,19 @@
+        .form-label {
+        color: var(--text-soft);
+        }
+        .form-control,
+        .form-select {
+        background-color: var(--bg-main);
+        border: 1px solid var(--green-soft);
+        color: var(--text-main);
+        }
+        .form-control::placeholder {
+        color: #6fae8f;
+        }
+        .form-control:focus,
+        .form-select:focus {
+        background-color: var(--bg-main);
+        border-color: var(--green-main);
+        box-shadow: 0 0 8px var(--box-shadow);
+        color: var(--text-white);
+        }

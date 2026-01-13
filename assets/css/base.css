@@ -1,0 +1,28 @@
+        :root { /* creo la paleta de colores paso de codigo a un texto para ocuparlo mas facil en las paginas*/
+        --bg-main: #0d1a14;
+        --bg-card: #12231b;
+        --border-main: #1f3b2e;
+        --green-main: #00ff66;
+        --green-soft: #00cc55;
+        --box-shadow: rgba(0, 255, 102, 0.5);
+        --text-main: #eafff3;
+        --text-white:#ffffff;
+        --text-shadow: rgba(17, 214, 74, 0.6);
+        --text-soft: #b6ffd9;
+        --logo-green: #11d64a;
+        --logo-cyan: #2de2e6;
+        }
+        body {
+        background-color: var(--bg-main);
+        color: var(--text-main);
+        min-height: 100vh; /* fondo ocupa toda la pantalla */
+        font-family: system-ui, sans-serif;
+        }
+        .center-wrapper {
+        min-height: 100vh; /* altura ocupa toda la pantalla*/
+        display: flex; /* activo el flexbox */
+        align-items: center;
+        justify-content: center;
+        }
+        
+

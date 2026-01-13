@@ -1,0 +1,41 @@
+        .deposit-card {
+        width: 100%;
+        max-width: 400px;
+        }
+        .deposit-card h2 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+        color: var(--bg-main);
+        text-shadow: 0 0 10px var(--text-shadow);
+        }
+        .balance-label{
+        text-align: center;
+        margin-bottom: 0.5rem;
+        }
+        /* Valores monetarios coherentes en todas las cards */
+        .money-value {
+        font-size: 2.2rem;           
+        font-weight: bold;
+        color: var(--green-main);
+        text-align: center;
+        margin-bottom: 1.5rem;
+        }
+        /* Input de monto a depositar, coherente con balance */
+        #depositAmount {
+        font-size: 1.4rem;           
+        font-weight: bold;
+        color: var(--text-main);
+        text-align: center;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        border: 1px solid var(--green-soft);
+        background-color: var(--bg-main);
+        }
+        #depositAmount:focus {
+        border-color: var(--green-main);
+        box-shadow: 0 0 8px var(--box-shadow);
+        outline: none;
+        }
+
+
+

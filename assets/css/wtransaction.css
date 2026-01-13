@@ -1,0 +1,46 @@
+        .transaction-card { 
+        width: 100%; /* tarjeta usa todo el ancho disponible */
+        max-width: 420px;/* no supera los 420px */
+        }
+        .transaction-card h2 {
+        margin-bottom: 1.5rem; /* separo el titulo del contenido */
+        text-align: center;
+        color: var(--text-main);
+        text-shadow: 0 0 10px var(--text-shadow);
+        }
+        #transactionList {
+        margin-top: 0.5rem;
+        }
+        .list-group-item { /* le doy mi estilo de colores */
+        background-color: var(--bg-main);
+        border: 1px solid var(--border-main);
+        color: var(--text-main);
+        margin-top: 0.4rem;
+        }
+        .transaction-item {
+        display: flex;
+        justify-content: space-between; /* separo descripción del monto */
+        align-items: center;
+        padding: 0.75rem 1rem;
+        }
+        .transaction-income,
+        .transaction-expense {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* alineo contenido a la derecha */
+        white-space: nowrap; /* evito que el texto salte de linea el + o - quedaría arriba */
+        line-height: 1.2; /* ajusto el espacio entre lineas, espaciado vertical */
+        }
+        .transaction-income {
+        color: var(--green-main);
+        font-weight: 600;
+        }
+        .transaction-expense {
+        color: #ff4d4d;
+        font-weight: 600;
+        }
+        .transaction-date {
+        font-size: 0.75rem;
+        color: #8fd9b3;
+        }
+
