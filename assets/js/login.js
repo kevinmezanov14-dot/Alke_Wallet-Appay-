@@ -1,43 +1,61 @@
-        // Credenciales válidas (simuladas)
-        const usuarioValido = "copo@appay.cl";
-        const contraseñaValida = "1234";
-        // Evento submit usando jQuery
-        $("#loginForm").submit(function (e) { //envia el formulario pero se detiene para validación
-        e.preventDefault();
-        const email = $("#email").val().trim(); // obtiene los valores de email (trim elimina espacios)
-        const password = $("#password").val().trim(); // obtiene los valores de password
-        if (!email || !password) { // si el email o || pass estan vacíos se ejecuta
-            $("#loginMessage").html(`
+// Credenciales válidas (simuladas)
+const usuarioValido = "copo@appay.cl";
+const passwordValido = "1234"; // ❗ sin acentos (convención JS)
+
+// Evento submit usando jQuery
+$("#loginForm").submit(function (e) { 
+    // envía el formulario pero se detiene para validación
+    e.preventDefault();
+
+    const email = $("#email").val().trim(); 
+    // obtiene el valor del email (trim elimina espacios)
+
+    const password = $("#password").val().trim(); 
+    // obtiene el valor del password
+
+    // si el email o || password están vacíos se ejecuta
+    if (!email || !password) {
+        $("#loginMessage").html(`
             <div class="alert alert-warning text-center">
                 ⚠️ Completa todos los campos
             </div>
-            `);
-            return;
-        }
-        if (email === usuarioValido && password === contraseñaValida) { // si el usuario y ademas el pass son iguales puede ingresar
-            //GUARDAR SESIÓN
-            localStorage.setItem( //guarda el usuario con fecha u hora, esto permite mantener sesión y validar en otras paginas
+        `);
+        return; // corta la ejecución
+    }
+
+    // si el usuario y además el password son iguales puede ingresar
+    if (email === usuarioValido && password === passwordValido) {
+
+        // GUARDAR SESIÓN
+        localStorage.setItem(
             "usuarioLogueado",
-            JSON.stringify({ //convierte el objeto js a texto ya que local storage no guarda objetos
+            JSON.stringify({
                 email: email,
-                loginAt: new Date().toISOString() //obtiene fecha y hora actual
+                loginAt: new Date().toISOString() 
+                // obtiene fecha y hora actual
             })
-            );
-            $("#loginMessage").html(`
+        );
+
+        $("#loginMessage").html(`
             <div class="alert alert-success text-center">
                 ✔ Acceso correcto. Redirigiendo…
             </div>
-            `);
-            setTimeout(() => {
+        `);
+
+        // redirección con pequeña espera para mostrar mensaje
+        setTimeout(() => {
             window.location.href = "menu.html";
-            }, 1200); //1.2 seg de espera
-        } else { // por el contrario si no se cumple envia mensaje
-            $("#loginMessage").html(`
+        }, 1200); // 1.2 segundos de espera
+
+    } else {
+        // si no se cumplen las credenciales muestra error
+        $("#loginMessage").html(`
             <div class="alert alert-danger text-center">
                 ❌ Email o contraseña incorrectos
             </div>
-            `);
-        }
-        });
+        `);
+    }
+});
+
 
 
