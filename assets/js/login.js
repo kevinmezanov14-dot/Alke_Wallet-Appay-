@@ -29,7 +29,7 @@
             </div>
             `);
             setTimeout(() => {
-            window.location.href = "wmenu.html";
+            window.location.href = "menu.html";
             }, 1200); //1.2 seg de espera
         } else { // por el contrario si no se cumple envia mensaje
             $("#loginMessage").html(`

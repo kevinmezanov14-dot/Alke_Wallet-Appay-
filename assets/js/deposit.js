@@ -45,10 +45,10 @@
                 // Limpiar input
                 $("#depositAmount").val("");
                 // Redirección
-                setTimeout(() => window.location.href = "wmenu.html", 2000); //da 2 seg para leer el mensaje antes de redirigir
+                setTimeout(() => window.location.href = "menu.html", 2000); //da 2 seg para leer el mensaje antes de redirigir
             });
             // Botón volver al menú
             $("#backMenuBtn").on("click", () => {
-                window.location.href = "wmenu.html";
+                window.location.href = "menu.html";
             });
         });

@@ -112,6 +112,6 @@
         });
         /* VOLVER AL MENÚ */
         $("#backMenuBtn").on("click", function () {
-            window.location.href = "wmenu.html";
+            window.location.href = "menu.html";
         });
         });

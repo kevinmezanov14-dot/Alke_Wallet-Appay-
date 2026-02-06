@@ -12,13 +12,13 @@
             }
             // BOTONES DEL MENÚ
             $("#btnDeposit").on("click", function () { // escucho el evento click y se realiiza la función 
-                redirectWithMessage("Depósito", "wdeposit.html");
+                redirectWithMessage("Depósito", "deposit.html");
             });
             $("#btnSend").on("click", function () {
-                redirectWithMessage("Enviar Dinero", "wsendmoney.html");
+                redirectWithMessage("Enviar Dinero", "sendmoney.html");
             });
             $("#btnTransactions").on("click", function () {
-                redirectWithMessage("Últimos Movimientos", "wtransaction.html");
+                redirectWithMessage("Últimos Movimientos", "transaction.html");
             });
             // SALDO
             let saldo = Number(localStorage.getItem("saldo")) || 60000; //intenta obtener saldo guardado || o si no hay o es inválido utiliza 60000
