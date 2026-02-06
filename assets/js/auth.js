@@ -1,15 +1,22 @@
 $(document).ready(function () {
 
-    const usuario = localStorage.getItem("usuarioLogueado");
-    // verifica si existe sesión activa
-
-    if (!usuario) { 
-        // si no hay usuario logueado, bloquea el acceso
+    // VALIDACIÓN DE SESIÓN (protege la página)
+    if (!localStorage.getItem("usuarioLogueado")) {
         window.location.href = "login.html";
         return;
     }
 
+    // LOGOUT (si existe el botón en la vista)
+    $("#logoutBtn").on("click", function () {
+
+        localStorage.removeItem("usuarioLogueado");
+        // elimina sesión simulada
+
+        window.location.href = "login.html";
+    });
+
 });
+
 
 
 
